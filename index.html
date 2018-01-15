@@ -2,36 +2,48 @@
 <html>
   <head>
     <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>رخص الألياف الضوئية - الرياض</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	    <link rel="stylesheet" href="ovc\responsive.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
+	  <script src="ovc/counter.js"></script>
   </head>
   <body>
     <div id="wrapper">
-      <header dir="rtl">رخص الالياف الضوئية - الرياض</header>
-
+      <header dir="rtl">
+	  رخص الالياف الضوئية - الرياض  
+	  </header>
       <h2 id="lastupdated" dir="rtl"></h2>
       <p id="copyright" dir="rtl">برمجة وتصميم <br>
-        <a href="https://www.adslgate.com/dsl/member.php?u=808768" target="_blank">Abdullah395</a> on <a href="http://adslgate.com" target="_blank">adslgate.com</a>
+        <a href="https://www.adslgate.com/dsl/member.php?u=808768" target="_blank">Abdullah395</a> ON <a href="http://adslgate.com" target="_blank">adslgate.com</a>
 		</p>
-	 <p id="copyright" dir="rtl">تحسين<br>
-	 	<a href="https://www.adslgate.com/dsl/member.php?u=503074" target="_blank">Joseph9</a> on <a href="http://adslgate.com" target="_blank">adslgate.com</a>
+	 <p id="copyright2" dir="rtl"><br>
+	 	<a href="https://www.adslgate.com/dsl/member.php?u=503074" target="_blank">Joseph9</a> ON <a href="http://adslgate.com" target="_blank">adslgate.com</a>
 		</p>
 
+<input type="text" id="search" placeholder="أبحث">
+<!-- counter -->
+<div align="center"><a href="http://ftth.ga"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3219790&c=9659683" alt="رخص الالياف الضوئية - الرياض"></a></div>
+<!-- counter -->
+	<script>
+		    $("#search").keyup(function(){
+        var searchText = $(this).val().toLowerCase();
+        // Show only matching TR, hide rest of them
+        $.each($("#licenses table"), function() {
+            if($(this).text().toLowerCase().indexOf(searchText) === -1)
+               $(this).hide();
+            else
+               $(this).show();                
+        });
+    }); 
+
+	</script>
 
       <div id="licenses" dir="rtl">
-
       </div>
-      <!-- <div id="pager" dir="rtl">
-        <button class="page"><<</button>
-        <button class="page">1</button>
-        <button class="page">2</button>
-        <button class="page">3</button>
-        <button class="page">4</button>
-        <button class="page">5</button>
-        <button class="page">>></button>
-      </div> -->
   </div>
   </body>
 </html>

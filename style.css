@@ -6,34 +6,38 @@ src: url("Boutros.ttf");
 
 body {
   background: #DDDDDD;
-  font-family: 'Boutros';
+  font-family: 'Boutros' !important;
 ';
 
 }
 
 #wrapper {
-  width: 80%;
+  /*width: 80%;*/
   margin: 0 auto;
   background-color: white;
   padding-bottom: 5px;
   border-radius: 10px;
+  border: 0.09em solid #a0a0a0;
+    -moz-box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.18);
 }
 
 header {
   font-family: 'Boutros';
-  background-color: #96bbc7;
+  background-color: #949494;
   color: white;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 23px;
   text-align: center;
   padding: 8px;
   margin-bottom: 15px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 }
 
 #licenses {
-  border-top: 1px solid #000;
+  border-top: 1px solid #a0a0a0;
   /*width: 800px;*/
   margin: 0 auto;
 }
@@ -45,12 +49,12 @@ header {
 table {
   /*width: 800px;*/
   margin: 0 auto;
-  margin-top: 10px;
-  margin-bottom: 17px;
+  margin-top: 20px;
+  margin-bottom: 25px;
   border-collapse: separate;
   border: 0.09em solid #a5a5a5;
-border-bottom-left-radius: 20px;
-border-bottom-right-radius: 20px;
+border-radius: 20px;
+border-radius: 20px;
 
 	-moz-box-shadow:3px 3px 5px rgba(0,0,0,0.3);
 	-webkit-box-shadow:3px 3px 5px rgba(0,0,0,0.3);
@@ -105,15 +109,40 @@ a {
 }
 
 #lastupdated {
-  font-family: 'aerial';
+  font-family: 'Boutros';
   text-align: center;
   margin: 0 auto;
+  font-size: 18px;
 }
 
 #copyright {
-  font-family: 'aerial';
-  font-size: 20px;
+  font-family: 'Boutros';
+  font-size: 15px;
   max-width: 400px;
-  margin: 15px auto 10px auto;
+  margin: 10px auto -15px auto;
   text-align: center;
+}
+
+#copyright2 {
+  font-family: 'Boutros';
+  font-size: 15px;
+  max-width: 400px;
+  margin: 0px auto 10px auto !important;
+  text-align: center;
+}
+
+
+#search {
+  font-family: 'Boutros';
+    font-size: 13px;
+	    margin-left: auto !important;
+	    margin-right: auto !important;
+	    display: block !important;
+		text-align:right;
+		margin: 10px;
+    width: 265px;
+    padding: 5px;
+    border-radius: 12px;
+    border-style: ridge;
+
 }
