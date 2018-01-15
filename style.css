@@ -112,7 +112,7 @@ a {
   font-family: 'Boutros';
   text-align: center;
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 1.09em;
 }
 
 #copyright {
@@ -146,3 +146,6 @@ a {
     border-style: ridge;
 
 }
+
+img[src*="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"] {
+    display: none;}

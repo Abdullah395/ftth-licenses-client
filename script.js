@@ -33,7 +33,8 @@ window.onload = function() {
 		data["licenses"] = uniq_fast(data["licenses"]);
 		
        const lastupdated = document.getElementById("lastupdated");
-       lastupdated.innerHTML = "اخر تحديث للبيانات: &nbsp" + data["lastupdate"];
+
+	   lastupdated.innerHTML = "اخر تحديث للبيانات:" + data["lastupdate"];
 
 	   lastupdated.style.color = '#007fa5'
        renderData(page, enteries);
