@@ -18,7 +18,6 @@ function uniq_fast(a) {
     return out;
 }
 
-
 window.onload = function() {
   const licenses = document.getElementById("licenses");
 
@@ -66,6 +65,12 @@ window.onload = function() {
 
     renderData(page, enteries);
   }*/
+
+  $('input#search').quicksearch('table tbody tr', {
+	selector: 'th'
+});
+
+$(input_selector).quicksearch(elements_to_search, options);
 
   function renderData(page, enteries) {
 
