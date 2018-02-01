@@ -33,8 +33,9 @@ window.onload = function() {
 		data["licenses"] = uniq_fast(data["licenses"]);
 		
        const lastupdated = document.getElementById("lastupdated");
-       lastupdated.innerHTML = "اخر تحديث للبيانات: &nbsp&nbsp" + data["lastupdate"];
+       lastupdated.innerHTML = "اخر تحديث للبيانات: &nbsp" + data["lastupdate"];
 
+	   lastupdated.style.color = '#007fa5'
        renderData(page, enteries);
     }
   };
@@ -66,11 +67,6 @@ window.onload = function() {
     renderData(page, enteries);
   }*/
 
-  $('input#search').quicksearch('table tbody tr', {
-	selector: 'th'
-});
-
-$(input_selector).quicksearch(elements_to_search, options);
 
   function renderData(page, enteries) {
 
@@ -83,19 +79,31 @@ $(input_selector).quicksearch(elements_to_search, options);
 
       //var license = data["licenses"][index];
 
+
+
       var table = document.createElement("table");
 
       var headerRow = document.createElement("tr");
       // headers
-      var header1 = document.createElement("th");
+      var header1 = document.createElement("td");
       header1.innerHTML = "رخصة رقم:&nbsp&nbsp&nbsp&nbsp&nbsp" + license["license"];
       headerRow.appendChild(header1);
 
-      var header2 = document.createElement("th");
+	  		// Set the background color to a light gray
+		header1.style.backgroundColor = 'rgb(193, 193, 193)';
+
+			header1.style.borderTopRightRadius = "18px";
+
+      var header2 = document.createElement("td");
       header2.innerHTML = "الرابط:&nbsp&nbsp&nbsp&nbsp&nbsp<a href='" + license["link"] + "' target='_blank'>اضغط هنا</a>";
       headerRow.appendChild(header2);
 
+	  		// Set the background color to a light gray
+		header2.style.backgroundColor = 'rgb(193, 193, 193)';
+					header2.style.borderTopLeftRadius = "18px";
+  
       table.appendChild(headerRow);
+
 
       var firstRow = document.createElement("tr");
 
@@ -116,12 +124,14 @@ $(input_selector).quicksearch(elements_to_search, options);
       firstRowData2.innerHTML = "الخدمة: " + license["service"];
       firstRow.appendChild(firstRowData2);
 
+
       table.appendChild(firstRow);
 		// Set the background color to a light gray
 		firstRowData2.style.backgroundColor = '#e5e5e569';
 
 		// Set the height to 150px
 		firstRowData2.style.height = '50px';
+
 
       var secondRow = document.createElement("tr");
 
@@ -138,6 +148,7 @@ $(input_selector).quicksearch(elements_to_search, options);
       secondRowData2.innerHTML = "تاريخ النهاية: " + license["endDate"];
       secondRow.appendChild(secondRowData2);
 
+
       table.appendChild(secondRow);
 
 	  		// Set the background color to a light gray
@@ -145,6 +156,8 @@ $(input_selector).quicksearch(elements_to_search, options);
 
 		// Set the height to 150px
 		secondRowData2.style.height = '50px';
+
+
 
       var thirdRow = document.createElement("tr");
 
@@ -154,9 +167,11 @@ $(input_selector).quicksearch(elements_to_search, options);
       thirdRowData1.innerHTML = "الحي: " + license["qoura"];
       thirdRow.appendChild(thirdRowData1);
 
+
       table.appendChild(thirdRow);
 	  	  		// Set the background color to a light gray
 		thirdRowData1.style.backgroundColor = 'rgb(167, 227, 245)';
+
 
       var fourthRow = document.createElement("tr");
 
@@ -165,6 +180,7 @@ $(input_selector).quicksearch(elements_to_search, options);
 
       fourthRowData1.innerHTML = "الشارع: " + license["streets"];
       fourthRow.appendChild(fourthRowData1);
+
 
       table.appendChild(fourthRow);
 
